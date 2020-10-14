@@ -13,11 +13,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; Renames Viewpoint Team's stupidly named RFI's
 ^!r::
-send ^c
-ClipWait, .1, 1
+send ^x
+sleep, 100
 clipboard := StrReplace(clipboard, "_Request for Information" , "")
+sleep, 100
 clipboard := StrReplace(clipboard, "_" , A_Space)
+sleep, 100
 clipboard := StrReplace(clipboard, "RFI " , "RFI_")
+sleep, 100
 send ^v
 
 return
