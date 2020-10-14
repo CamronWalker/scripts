@@ -11,6 +11,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Include, %A_ScriptDir%\Includes\Short Sentences.ahk
 #Include, %A_ScriptDir%\Includes\Functions.ahk
 
+; Renames Viewpoint Team's stupidly named RFI's
+^!r::
+send ^c
+ClipWait, .1, 1
+clipboard := StrReplace(clipboard, "_Request for Information" , "")
+clipboard := StrReplace(clipboard, "_" , A_Space)
+clipboard := StrReplace(clipboard, "RFI " , "RFI_")
+send ^v
+
+return
+
 ^F1:: ; Open or switch to Chrome
   OpenActivateProgram("chrome.exe", "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk")
 return
