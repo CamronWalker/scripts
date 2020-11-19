@@ -7,9 +7,9 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-#Include, %A_ScriptDir%\Includes\Key Locks.ahk
-#Include, %A_ScriptDir%\Includes\Short Sentences.ahk
-#Include, %A_ScriptDir%\Includes\Functions.ahk
+#Include, %A_ScriptDir%\MainScript_Includes\Key Locks.ahk
+#Include, %A_ScriptDir%\MainScript_Includes\Short Sentences.ahk
+#Include, %A_ScriptDir%\MainScript_Includes\Functions.ahk
 
 ; Renames Viewpoint Team's stupidly named RFI's
 ^!r::
@@ -82,11 +82,11 @@ return
 return
 
 ^F19:: ; Attach Submittal Cover see Add Submittal Cover.ahk command
-  RunWait, "C:\Program Files\AutoHotkey\AutoHotkey.exe" "%A_ScriptDir%\Scripts\Bluebeam\Add Submittal Cover.ahk" "SGU Submittal Cover.pdf"
+  RunWait, "C:\Program Files\AutoHotkey\AutoHotkey.exe" "%A_ScriptDir%\..\AppSpecific\Bluebeam\Add Submittal Cover.ahk" "SGU Submittal Cover.pdf"
 return
 
 ^F20:: ; Toggle Connection to Work VPN
-  RunWait, "C:\Program Files\AutoHotkey\AutoHotkey.exe" "%A_ScriptDir%\Scripts\Toggle Work VPN.ahk" "HHS2 Submittal Cover.pdf"
+  RunWait, "C:\Program Files\AutoHotkey\AutoHotkey.exe" "%A_ScriptDir%\..\AppSpecific\FileManagement\Toggle Work VPN.ahk" "HHS2 Submittal Cover.pdf"
 return
 
 ^F21:: ; Microsoft To-Do Online
@@ -97,8 +97,8 @@ return
   FindChromeTab("YouTube", "youtube.com")
 return
 ^F23:: ; Open VS Studio and Code Current Directory
-  RunWait, "C:\Program Files\AutoHotkey\AutoHotkey.exe" "%A_ScriptDir%\Scripts\File Explorer\Code Current Folder.ahk"
+  RunWait, "C:\Program Files\AutoHotkey\AutoHotkey.exe" "%A_ScriptDir%\..\AppSpecific\FileManagement\Code Current Folder.ahk"
 return
 ^F24:: ; Backup Desktop to Desktop Backup folder within the Documents Folder
-  RunWait, PowerShell.exe -ExecutionPolicy ByPass -File "%A_ScriptDir%\Scripts\File Explorer\ps desktop backup.ps1"
+  RunWait, PowerShell.exe -ExecutionPolicy ByPass -File "%A_ScriptDir%\..\AppSpecific\FileManagement\ps desktop backup.ps1"
 return
