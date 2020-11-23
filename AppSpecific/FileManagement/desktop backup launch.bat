@@ -1,0 +1,1 @@
+PowerShell.exe -ExecutionPolicy ByPass -File "C:\Users\camron\code\scripts\AppSpecific\FileManagement\ps desktop backup.ps1"
