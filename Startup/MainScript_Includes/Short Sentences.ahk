@@ -22,6 +22,7 @@ return
 
 :*:revinst::(To view previous revisions click on the small down facing triangle next to the REV {#} on the upper left of the screen.)
 :*:rfiinst::Please submit this RFI through https://team.viewpoint.com by following the instructions on http://teamdocs.viewpoint.com/topics/RFI/t_add_an_RFI.html. (NOTE: Please do not just attach a PDF of your RFI. The correct way is to fill out the create RFI form on Viewpoint Team and send it to Westland PE's. A good example of an attachment is a clouded or marked up drawing that helps explain the RFI question that was typed out or copy/pasted in Viewpoint Team form.)
+:*:notecomm::Please note any comments made by the Architect and work with the project superintendent to coordinate correct procurement and install.
 
 ; Date and time related
 
