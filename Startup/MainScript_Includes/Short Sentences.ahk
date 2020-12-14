@@ -61,7 +61,7 @@ return
 ; camsign for "-Camron <date> <time>"
 :*:camsign::
     FormatTime, camsigndate, ,yyyy-MM-dd hh:mm tt
-    SendInput, -Camron %camsigndate%
+    SendInput, - Camron %camsigndate%
 return
 ; other acronyms I hate
 ; :*:idk::I don't know.
