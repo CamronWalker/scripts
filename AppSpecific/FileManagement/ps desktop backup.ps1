@@ -7,11 +7,11 @@ Write-Output "Desktop Backup on $DateStr"
 
 # Get current users environment variables
 $DesktopPath = [Environment]::GetFolderPath("Desktop")
-$DocumentsPath = [Environment]::GetFolderPath("MyDocuments")
+$UserPath = [Environment]::GetFolderPath("UserProfile")
 
 # Set directory strings
-$BackupFolder = "$DocumentsPath\Desktop Backup\Desktop Backup $DateStr"
-$MainBackupFolder = "$DocumentsPath\Desktop Backup"
+$BackupFolder = "$UserPath\OneDrive - Westland Construction\Documents\Desktop Backup\Desktop Backup $DateStr"
+$MainBackupFolder = "$UserPath\OneDrive - Westland Construction\Documents\Desktop Backup"
 Write-Output "$DesktopPath"
 Write-Output "$BackupFolder"
 
