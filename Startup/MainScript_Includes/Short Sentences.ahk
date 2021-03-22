@@ -32,6 +32,10 @@ return
     FormatTime, shorttime, ,yyyy-MM-dd
     SendInput, %shorttime%
 return
+; Name as ccc
+:*:ccc::
+    send, Camron Walker
+return
 ; tdt for today's date and time
 :*:tdt::
     FormatTime, todaydateandtime, ,yyyy-MM-dd hh:mm tt
