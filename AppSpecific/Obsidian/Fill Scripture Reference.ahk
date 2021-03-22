@@ -9,7 +9,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     StartSelection := GetSelectedText()
     InputBox, ReferenceStr , Insert Reference, Please type the reference you would like to include in BOOK_NAME CHAPTER:VERSE_RANGE format. `rEXAMPLE: Genesis 1:1-5 , , , , , , , 120, %StartSelection%
     if ErrorLevel {
-        MsgBox, ReferenceStr Cancelled
+        MsgBox, %ReferenceStr% Cancelled
     } else {
         ; MsgBox, OK    
 
