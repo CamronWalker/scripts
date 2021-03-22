@@ -27,7 +27,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
         Loop
         {
             if (A_Index >= VerseRangeStart) {
-                OutputLoop := OutputLoop . "![[" . SplitReference[1] . "#" . A_Index "]]" 
+                OutputLoop := OutputLoop . "![[" . SplitReference[1] . "#" . A_Index "]] " 
                 ; msgbox, %OutputLoop%
             }
         } Until A_Index = VerseRangeLast
