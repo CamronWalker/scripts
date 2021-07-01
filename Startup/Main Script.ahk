@@ -64,19 +64,24 @@ return
   send !hy2
 return
 
-^F9:: ; archive outlook email and open the archived one
+^F9:: ; 
   OpenActivateProgram("Teams.exe", "C:\Users\camron\AppData\Local\Microsoft\Teams\current\Teams.exe")
   send ^+m
 return
 
-^F10:: ; archive outlook email and open the archived one
+^F10:: ; 
   OpenActivateProgram("Teams.exe", "C:\Users\camron\AppData\Local\Microsoft\Teams\current\Teams.exe")
   send ^+o
 return
 
-^F11:: ; archive outlook email and open the archived one
+^F11:: ; 
   OpenActivateProgram("Teams.exe", "C:\Users\camron\AppData\Local\Microsoft\Teams\current\Teams.exe")
   send ^+e
+return
+
+^F12:: ; a
+  OpenActivateProgram("Teams.exe", "C:\Users\camron\AppData\Local\Microsoft\Teams\current\Teams.exe")
+  send ^/
 return
 
 ^F13:: ; Bluebeam Studio Online
