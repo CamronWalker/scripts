@@ -57,11 +57,8 @@ return
 return
 
 ^F7:: ; archive outlook email
-  send, [RAlt]
-  sleep, 5
-  send, h
-  sleep, 5
-  send, o
+  send !ho ; alt then h then o
+
 return
 
 ^F13:: ; Bluebeam Studio Online
