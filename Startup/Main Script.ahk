@@ -64,6 +64,21 @@ return
   send !hy2
 return
 
+^F9:: ; archive outlook email and open the archived one
+  OpenActivateProgram("Teams.exe", "C:\Users\camron\AppData\Local\Microsoft\Teams\current\Teams.exe")
+  send ^+m
+return
+
+^F10:: ; archive outlook email and open the archived one
+  OpenActivateProgram("Teams.exe", "C:\Users\camron\AppData\Local\Microsoft\Teams\current\Teams.exe")
+  send ^+o
+return
+
+^F11:: ; archive outlook email and open the archived one
+  OpenActivateProgram("Teams.exe", "C:\Users\camron\AppData\Local\Microsoft\Teams\current\Teams.exe")
+  send ^+e
+return
+
 ^F13:: ; Bluebeam Studio Online
   FindChromeTab("Bluebeam Drawings", "web.bluebeam.com")
 return
