@@ -56,6 +56,14 @@ return
   OpenActivateProgram("Teams.exe", "C:\Users\camron\AppData\Local\Microsoft\Teams\current\Teams.exe")
 return
 
+^F7:: ; archive outlook email
+  send, [RAlt]
+  sleep, 5
+  send, h
+  sleep, 5
+  send, o
+return
+
 ^F13:: ; Bluebeam Studio Online
   FindChromeTab("Bluebeam Drawings", "web.bluebeam.com")
 return
