@@ -131,3 +131,9 @@ return
 ^F24:: ; Backup Desktop to Desktop Backup folder within the Documents Folder
   RunWait, PowerShell.exe -ExecutionPolicy ByPass -File "%A_ScriptDir%\..\AppSpecific\FileManagement\ps desktop backup.ps1"
 return
+
+^+F1:: ; 
+  send ^l
+  send, javascript: var inputs = document.getElementsByClassName('form-control')`; for(var i = 0`; i < inputs.length`; i{+}{+}) {{} inputs[i].disabled = false`; {}}
+  send {Enter}
+  return
