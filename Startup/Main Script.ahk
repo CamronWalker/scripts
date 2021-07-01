@@ -58,7 +58,10 @@ return
 
 ^F7:: ; archive outlook email
   send !ho ; alt then h then o
+return
 
+^F8:: ; archive outlook email and open the archived one
+  send !hy2
 return
 
 ^F13:: ; Bluebeam Studio Online
