@@ -132,8 +132,10 @@ return
   RunWait, PowerShell.exe -ExecutionPolicy ByPass -File "%A_ScriptDir%\..\AppSpecific\FileManagement\ps desktop backup.ps1"
 return
 
-^+F1:: ; 
+^+F1:: ; ctrl+shift+F1
   send ^l
+  sleep, 50
+  SetKeyDelay, 1
   send, javascript: var inputs = document.getElementsByClassName('form-control')`; for(var i = 0`; i < inputs.length`; i{+}{+}) {{} inputs[i].disabled = false`; {}}
   send {Enter}
   return
