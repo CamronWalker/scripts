@@ -103,7 +103,7 @@ return
 return
 
 ^F17:: ; Switch to / open Bluebeam Revu
-  OpenActivateProgram("Revu.exe", "C:\Program Files\Bluebeam Software\Bluebeam Revu\2018\Revu\Revu.exe")
+  OpenActivateProgram("Revu.exe", "C:\Program Files\Bluebeam Software\Bluebeam Revu\20\Revu\Revu.exe")
 return
 
 ^F18:: ; Switch to / open Excel
