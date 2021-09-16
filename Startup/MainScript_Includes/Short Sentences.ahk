@@ -32,15 +32,23 @@ return
     FormatTime, shorttime, ,yyyy-MM-dd
     SendInput, %shorttime%
 return
+
 ; Name as ccc
 :*:ccc::
     send, Camron Walker
 return
+
+; email as eee
+:*:eee::
+    send, camron@westlandconstruction.com
+return
+
 ; tdt for today's date and time
 :*:tdt::
     FormatTime, todaydateandtime, ,yyyy-MM-dd hh:mm tt
     SendInput, %todaydateandtime%
 return
+
 ; emailfu for "Followed up with an email sent on <date> around <time>. -Camron"
 :*:emailfu::
     FormatTime, emailfudate, ,MMMM d, yyyy
