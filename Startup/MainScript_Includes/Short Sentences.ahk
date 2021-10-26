@@ -7,7 +7,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*:qcall::Please give me a call if you have any questions (801.875.2600).
 :*:qemail::Please reply to let me know if you have any questions.
 :*:qlmk::Let me know if you have any questions (801.875.2600).
-:*:hlmk::Let me know if there is anything I can do to help this along (801.875.2600).
+:*:hlmk::Let me know if there is anything I can do to help (801.875.2600).
 
 ; r Short Sentences (Reply)
 :*:rnow::I would appreciate your immediate attention to this matter.
