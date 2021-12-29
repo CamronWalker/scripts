@@ -41,6 +41,12 @@ return
     SendInput, %shorttime%
 return
 
+; tddd for todays date
+:*:udate::
+    FormatTime, shorttime, ,yyyy-MM-dd
+    SendInput, Update %shorttime%:
+return
+
 ; Name as ccc
 :*:ccc::
     send, Camron Walker
