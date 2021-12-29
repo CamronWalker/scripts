@@ -44,7 +44,7 @@ return
 ; tddd for todays date
 :*:udate::
     FormatTime, shorttime, ,yyyy-MM-dd
-    SendInput, Update %shorttime%:
+    SendInput, Camron %shorttime%:
 return
 
 ; Name as ccc
