@@ -20,10 +20,8 @@ return
 
 :*:tyc::
     send Thanks,
-    send, {Enter 3}
-    send Camron
+    send, {Enter 1}
     send !nas
-    send {Down 2}
     send {Enter}
 return
 ; Instructions
