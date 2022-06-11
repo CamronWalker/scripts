@@ -12,77 +12,88 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
         OutputDebug, %ReferenceStr% Cancelled
     } else {
     ; MsgBox, OK
-    BooksNumberArray := [["01", "1 Nephi", "1-Ne"], ["02", "2 Nephi", "2-Ne"], ["03", "Jacob", "Jacob"], ["04", "Enos", "Enos"], ["05", "Jarom", "Jarom"], ["06", "Omni", "Omni"], ["07", "Words of Mormon", "WoM"], ["08", "Mosiah", "Mos"], ["09", "Alma", "Alma"], ["10", "Helaman", "Hel"], ["11", "3 Nephi", "3-Ne"], ["12", "4 Nephi", "4-Ne"], ["13", "Mormon", "Mormon"], ["14", "Ether", "Ether"], ["15", "Moroni", "Moroni"]]
-
-
     
-    SplitReference := StrSplit(ReferenceStr, ":")
-    LastSpaceLocation := InStr(SplitReference[1], " " , False, 0)
-    ; MsgBox, %LastSpaceLocation%
-
-    ChapterNumber := SubStr(SplitReference[1], LastSpaceLocation + 1)
-    ; MsgBox, %ChapterNumber%
-
-    BookName := SubStr(SplitReference[1], 1, LastSpaceLocation - 1)
-    BookNameNoSpaces := StrReplace(BookName, " " , "-")
-    ; MsgBox, %BookNameNoSpaces%
-    for index, element in BooksNumberArray
-        {
-            if element[2] = BookName {
-                BookNameNumber := element[1]
-                BookNameAbv := element[3]
-            }
-        }
-
-    ; MsgBox, %BookNameNumber%
-
-
-    if InStr(SplitReference[2], "-") {
-        ; Verse With Range
-
-
-
-    } else {
-        ; Single Verse
-        VerseNumber := SplitReference[2]
-        CalloutContent :=">[!scripture] " ReferenceStr . "`r>![[" . BookNameNumber . " " . BookName . "#^c" . ChapterNumber . "v" . VerseNumber . "]]`r>#Scripture/BoM/" . BookNameAbv . "/C" . ChapterNumber . "/V" . VerseNumber
-        Clipboard = %CalloutContent%
-        Send, ^v
-    }
-
-   /*
         SplitReference := StrSplit(ReferenceStr, ":")
-        ; msgbox, % SplitReference[1]
-        ; msgbox, % SplitReference[2]
+        LastSpaceLocation := InStr(SplitReference[1], " " , False, 0)
+        ; MsgBox, %LastSpaceLocation%
+
+        
+        ChapterNumber := SubStr(SplitReference[1], LastSpaceLocation + 1)
+        ; MsgBox, %ChapterNumber%
+
+        BookName := SubStr(SplitReference[1], 1, LastSpaceLocation - 1)
+        BookNameNoSpaces := StrReplace(BookName, " " , "-")
+        ;MsgBox, %BookName%
+    
+        if (BookName = "D&C") {
+            BookNameNumber := ""
+            BookNameAbv := "DaC"
+            BookSectionNameAbv := ""
+            DCTagSlash := ""
+            DCSpace := ""
+
+            } else {
+                ; MsgBox, "Not D&C"
+            
+            ;This is because if it's not D&C then they need this slash and space
+            DCTagSlash := "/"
+            DCSpace := " "
+
+                for each, line in StrSplit(FileOpen("C:\Users\camron\code\scripts\AppSpecific\Obsidian\Scripture Books.txt", "r").Read(), "`n", "`r")
+                    {
+                        ;FileOpen(line ".txt", "w")
+                        ;MsgBox, %line%
+                        BookArray := StrSplit(line, ",")
+                        
+                        ;MsgBox % BookArray[1] . " " . BookArray[2]
+                        
+                        if (BookArray[1] = BookName) {
+                            BookNameNumber := BookArray[2]
+                            BookNameAbv := BookArray[3]
+                            BookSectionNameAbv := BookArray[4]
+
+                            ;MsgBox, %BookNameNumber%
+                        } else {
+                            ;MsgBox, "Book Not Found!"
+                        }
+                    }
+            }
+
+        CleanBookNameAbv := StrReplace(BookNameAbv, "&", "a")
 
         if InStr(SplitReference[2], "-") {
+            ; Verse With Range
+            ;MsgBox, "Has Dash"
+
+            LinkLoopOutput := ""
+            TagLoopOutput := ""
+            CalloutContent :=">[!scripture] " ReferenceStr . "`r>"
 
             VerseRange := StrSplit(SplitReference[2], "-")
-
             VerseRangeStart := Format("{:d}", VerseRange[1])
             VerseRangeLast := Format("{:d}", VerseRange[2])
-
-            OutputLoop := ""
 
             Loop
             {
                 if (A_Index >= VerseRangeStart) {
-                    OutputLoop := OutputLoop . "![[" . SplitReference[1] . "#" . A_Index "]] " 
-                    ; msgbox, %OutputLoop%
+                    LinkLoopOutput := LinkLoopOutput . "![[" . BookNameNumber . DCSpace . BookName . "#^c" . ChapterNumber . "v" . A_Index . "]]"
+                    TagLoopOutput := TagLoopOutput . "#Scripture/" . BookSectionNameAbv . DCTagSlash . CleanBookNameAbv . "/C" . ChapterNumber . "/V" . A_Index
+                    ;msgbox, %LinkLoopOutput%
                 }
             } Until A_Index = VerseRangeLast
 
-            ReturnText := "> __[[" . SplitReference[1] . "|" . StartSelection . "]]__`r> " . OutputLoop
-            ; msgbox, %ReturnText%
-            Clipboard = %ReturnText%
+            CalloutContent := CalloutContent . LinkLoopOutput . "`r>" . TagLoopOutput
+
+            Clipboard = %CalloutContent%
             Send, ^v
-            } else {
-                ; MsgBox, "no -"
 
-                 
-
-        } 
-        */
+        } else {
+            ; Single Verse
+            VerseNumber := SplitReference[2]
+            CalloutContent :=">[!scripture] " ReferenceStr . "`r>![[" . BookNameNumber . DCSpace . BookName . "#^c" . ChapterNumber . "v" . VerseNumber . "]]`r>#Scripture/" . BookSectionNameAbv . DCTagSlash . CleanBookNameAbv . "/C" . ChapterNumber . "/V" . VerseNumber
+            Clipboard = %CalloutContent%
+            Send, ^v
+        }
     }
     return
 #If

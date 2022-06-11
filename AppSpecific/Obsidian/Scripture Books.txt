@@ -1,0 +1,87 @@
+D&C,01,D&C,D&C
+1 Nephi,01,1-Ne,BoM
+2 Nephi,02,2-Ne,BoM
+Jacob,03,Jacob,BoM
+Enos,04,Enos,BoM
+Jarom,05,Jarom,BoM
+Omni,06,Omni,BoM
+Words of Mormon,07,WoM,BoM
+Mosiah,08,Mos,BoM
+Alma,09,Alma,BoM
+Helaman,10,Hel,BoM
+3 Nephi,11,3-Ne,BoM
+4 Nephi,12,4-Ne,BoM
+Mormon,13,Mormon,BoM
+Ether,14,Ether,BoM
+Moroni,15,Moroni,BoM
+Matthew,01,Matt,NewT
+Mark,02,Mark,NewT
+Luke,03,Luke,NewT
+John,04,John,NewT
+Acts,05,Acts,NewT
+Romans,06,Rom,NewT
+1 Corinthians,07,1-Cor,NewT
+2 Corinthians,08,2-Cor,NewT
+Galatians,09,Gal,NewT
+Ephesians,10,Eph,NewT
+Philippians,11,Phil,NewT
+Collosians,12,Coll,NewT
+1 Thessalonians,13,1-Thes,NewT
+2 Thessalonians,14,2-Thes,NewT
+1 Timothy,15,1-Tim,NewT
+2 Timothy,16,2-Tim,NewT
+Titus,17,Titus,NewT
+Philemon,18,Philem,NewT
+Hebrews,19,Heb,NewT
+James,20,James,NewT
+1 Peter,21,1-Pet,NewT
+2 Peter,22,2-Pet,NewT
+1 John,23,1-John,NewT
+2 John,24,2-John,NewT
+3 John,25,3-John,NewT
+Jude,26,Jude,NewT
+Revelation,27,Rev,NewT
+Genesis,01,Gen,OldT
+Exodus,02,Exo,OldT
+Leviticus,03,Lev,OldT
+Numbers,04,Num,OldT
+Deuteronomy,05,Deut,OldT
+Joshua,06,Josh,OldT
+Judges,07,Judg,OldT
+Ruth,08,Ruth,OldT
+1 Samuel,09,1-Sam,OldT
+2 Samuel,10,2-Sam,OldT
+1 Kings,11,1-King,OldT
+2 Kings,12,2-King,OldT
+1 Chronicles,13,1-Chro,OldT
+2 Chronicles,14,2-Chro,OldT
+Ezra,15,Ezra,OldT
+Nehemiah,16,Nehem,OldT
+Esther,17,Esther,OldT
+Job,18,Job,OldT
+Psalms,19,Psalm,OldT
+Proverbs,20,Prov,OldT
+Ecclesiastes,21,Eccles,OldT
+Song of Solomon,22,SoS,OldT
+Isaiah,23,Isaiah,OldT
+Jeremiah,24,Jerem,OldT
+Lamentations,25,Lament,OldT
+Ezekiel,26,Ezek,OldT
+Daniel,27,Dan,OldT
+Hosea,28,Hosea,OldT
+Joel,29,Joel,OldT
+Amos,30,Amos,OldT
+Obadiah,31,Obad,OldT
+Jonah,32,Jonah,OldT
+Micah,33,Micah,OldT
+Nahum,34,Nahum,OldT
+Habakkuk,35,Habak,OldT
+Zephaniah,36,Zeph,OldT
+Haggai,37,Hagg,OldT
+Zechariah,38,Zech,OldT
+Malachi,39,Mal,PoGP
+Moses,01,Moses,PoGP
+Abraham,02,Abra,PoGP
+Joseph Smith--Matthew,03,JS-Matt,PoGP
+Joseph Smith--History,04,JS-Hist,PoGP
+The Articles of Faith,05,AoF,PoGP
