@@ -1,4 +1,4 @@
 echo off
-REM mqDZc584*J*u&3h2
+REM cMj9QBQb6mDMvdi6GR2FLqjLe
 
-net use w: "\\walker-drive\Shared Drive" "mqDZc584*J*u&3h2" /user:share /persistent:yes
+net use w: "\\walker-drive\Shared Drive" "cMj9QBQb6mDMvdi6GR2FLqjLe" /user:share /persistent:yes
