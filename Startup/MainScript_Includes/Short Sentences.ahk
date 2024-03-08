@@ -4,10 +4,11 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; q Short Sentences (Questions)
-:*:qcall::Please give me a call if you have any questions (801.875.2600).
-:*:qemail::Please reply to let me know if you have any questions.
-:*:qlmk::Let me know if you have any questions (801.875.2600).
-:*:hlmk::Let me know if there is anything I can do to help (801.875.2600).
+:*:qcall::Feel free to give me a call if you have any questions (801.875.2600).
+:*:qemail::Let's keep communication related to this subject in this email thread to stay on the same page. Please reply all if you have any questions.
+:*:qlmk::Feel free to let me know if you have any questions (801.875.2600).
+:*:hlmk::Feel free to let me know if there is anything I can do to help (801.875.2600).
+:*:afuemail::This is an automated follow-up reminder. If this is already resolved, please ignore this message. Your attention to this matter is greatly appreciated.
 
 ; r Short Sentences (Reply)
 :*:rnow::I would appreciate your immediate attention to this matter.
@@ -39,10 +40,16 @@ return
     SendInput, %shorttime%
 return
 
-; tddd for todays date
+; udate for for date
 :*:udate::
     FormatTime, shorttime, ,yyyy-MM-dd
     SendInput, %shorttime% Camron:
+return
+
+; mudate is an update for a meeting
+:*:mudate::
+    FormatTime, shorttime, ,yyyy-MM-dd
+    SendInput, UPDATE %shorttime%:
 return
 
 ; Name as ccc

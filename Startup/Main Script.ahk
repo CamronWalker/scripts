@@ -10,8 +10,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; #Include, %A_ScriptDir%\MainScript_Includes\Key Locks.ahk
 #Include, %A_ScriptDir%\MainScript_Includes\Short Sentences.ahk
 #Include, %A_ScriptDir%\MainScript_Includes\Functions.ahk
-#Include, %A_ScriptDir%\..\AppSpecific\Obsidian\Fill Scripture Reference.ahk ; NOT CURRENTLY BEING USED
-#Include, %A_ScriptDir%\..\AppSpecific\Obsidian\Update YouTube Short Link.ahk
+;#Include, %A_ScriptDir%\..\AppSpecific\Obsidian\Fill Scripture Reference.ahk ; NOT CURRENTLY BEING USED
+;#Include, %A_ScriptDir%\..\AppSpecific\Obsidian\Update YouTube Short Link.ahk
 ;#Include, %A_ScriptDir%\..\AppSpecific\Obsidian\Get Publish Link.ahk
 
 
