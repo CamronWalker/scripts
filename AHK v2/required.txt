@@ -1,0 +1,2 @@
+Require https://github.com/thqby/ahk2_lib/tree/master
+ahk2_lib
